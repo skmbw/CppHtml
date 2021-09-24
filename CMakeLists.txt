@@ -28,8 +28,8 @@ if(BUILD_TESTS)
   add_executable(test ${TEST_SOURCE})
   target_link_libraries(test cpphtml)
 endif()
-
+find_package(CURL)
 # 放出来，用来测试
 file(GLOB TEST_SOURCE "test/*.cpp")
 add_executable(test ${TEST_SOURCE})
-target_link_libraries(test cpphtml)
+target_link_libraries(test cpphtml curl)
