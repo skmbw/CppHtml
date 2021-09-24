@@ -47,11 +47,14 @@ int main()
 //        stream >> doc;
 //        cout << doc << endl;
 
-        for (auto& p : doc.node()["body"].back()["script"])
+//        for (auto beg = doc.node()["body"].front()["div"].begin(); beg != doc.node()["body"].front()["div"].end(); ++beg) {
+//            cout << beg->front() << std::endl;
+//        }
+
+        for (auto& p : doc.node()["body"].front()["script"])
         {
-            cout << p.front().text();
+            cout << p.front().text() << std::endl;
         }
-        cout << endl;
     }
 
 }
